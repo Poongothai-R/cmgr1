@@ -24,6 +24,15 @@ list{
     margin: 0;
     background-color: antiquewhite;
 }
+
+.card:focus-within{
+    transform: scale(1.05);
+    background-color: burlywood;
+}
+.card:hover{
+    transform: scale(1.05);
+
+}
 .center {
     font-family: 'Open Sans', sans-serif;
     text-align: left;

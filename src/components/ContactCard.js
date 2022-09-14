@@ -16,7 +16,7 @@ const ContactCard = (props) => {
     return (
         <div className="list">
             <div className=" list-group ">
-                <div className="card" align="flex">
+                <div className="card" align="flex" tabIndex="-1">
                     <div className=" card-group isactive" onClick={()=>props.clickHandler(recs.id)} href={'#${recs.id}'}>
                         <div className="left">
                             <img src={user} width="90" height="90"
