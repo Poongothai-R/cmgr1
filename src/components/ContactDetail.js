@@ -20,7 +20,7 @@ const ContactDetail = (props) => {
                     </thead>
                     <tbody>
                     <th scope="col"><i className="fa fa-user"></i></th>
-                    <th scope="col">{item.name}</th>
+                    <th scope="col"><h3>{item.name}</h3></th>
                     <tr>
                         <th>UserName</th>
                         <th colSpan="3">{item.username}</th>
