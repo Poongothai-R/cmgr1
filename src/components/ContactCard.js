@@ -6,10 +6,8 @@ const ContactCard = (props) => {
     console.log(props);
     const recs = props.contact;
 
-    // const getContactId = (e) => {
-    //   alert("Hi");
-    // };
-
+// ......trying to highlight the selected contact....
+//const [isActive,setActive]=useState("")
 // const toggleCard=()=>{
 //   setActive(!isActive);
 // }
@@ -19,7 +17,7 @@ const ContactCard = (props) => {
         <div className="list">
             <div className=" list-group ">
                 <div className="card" align="flex">
-                    <div className=" card-group" onClick={()=>props.clickHandler(recs.id)}>
+                    <div className=" card-group isactive" onClick={()=>props.clickHandler(recs.id)} href={'#${recs.id}'}>
                         <div className="left">
                             <img src={user} width="90" height="90"
                                  alt="user"/></div>

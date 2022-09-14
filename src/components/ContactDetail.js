@@ -5,16 +5,22 @@ const ContactDetail = (props) => {
     const recs = props.recs;
     console.log(recs);
 
+    const deleteContact = (id) => {
+        props.getDeleteId(id);
+    }
+
     const renderViewContact = recs.map((item) => {
         return (<div className="table">
                 <table className="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col"><i className="fa fa-user"></i></th>
-                        <th scope="col">{item.name}</th>
+                        <th></th>
+                        <th scope="col"><button className="fa fa-trash" onClick={()=>{deleteContact(item.id)}}></button></th>
                     </tr>
                     </thead>
                     <tbody>
+                    <th scope="col"><i className="fa fa-user"></i></th>
+                    <th scope="col">{item.name}</th>
                     <tr>
                         <th>UserName</th>
                         <th colSpan="3">{item.username}</th>

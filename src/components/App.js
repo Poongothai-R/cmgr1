@@ -8,7 +8,7 @@ import ContactDetail from "./ContactDetail";
 
 function App() {
 
-    const records = data;
+    const [records,setRecords] = useState(data);
 
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState("");
@@ -24,7 +24,21 @@ function App() {
         setDtlRecs(detailRecs);
         console.log(detailRecs);
     };
+    const deleteHandler= (id) => {
+        // console.log(id); alert(id);
+         const newRecs = records.filter((contact) => {
+           return contact.id !== id;
+        });
+         setRecords(newRecs);
+        setDtlRecs("");
+        const newContactList = newRecs.filter((contact) => {
+            const S1 = searchTerm.toLowerCase();
+            const R1 = contact.name.toLowerCase();
+            return (S1 && R1.startsWith(S1));
 
+        });
+        setSearchResults(newContactList);
+    };
     const searchHandler = (searchTerm) => {
         console.log(searchTerm);
         setSearchTerm(searchTerm);
@@ -53,10 +67,15 @@ function App() {
                              getContactId={viewContactHandler}/>
             </div>
             <div className="col-lg-6">
+
                 {
-                    (dtlRecs.length < 1) ? (<h1>Click contact to view contact details!</h1>)
-                        : (<ContactDetail recs = {dtlRecs} />)
+
+                    (dtlRecs.length < 1) ? (<h1></h1>)
+
+                        : (<ContactDetail recs={dtlRecs}  getDeleteId={deleteHandler}/>)
+
                 }
+
             </div>
         </div>
     </div>);

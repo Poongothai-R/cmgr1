@@ -12,11 +12,8 @@ code {
     monospace;
 }
 .table{
-  background-color: burlywood;
+  /*background-color: burlywood;*/
 }
 
 
 
-.card-group isActive{
-background-color: antiquewhite;
-}
