@@ -42,6 +42,9 @@
   justify-content: center;
 
 }
+.col-lg-6{
+  overflow-style:scroll; height: 400px;
+}
 input{
   width:220px;
 }
@@ -100,4 +103,14 @@ body{
   width: 100%;
   padding: 10px;
   /*text-align: center;*/
+}
+
+.col-lg-7 {
+
+  overflow-y: scroll;
+
+  max-height: 800px;
+
+  display:inline-block
+
 }

@@ -14,7 +14,7 @@ const ContactList = (props) => {
                             clickHandler={viewContact} key={contact.id}/>;
     });
 
-    return (<div>
+    return (<div className="clist">
         {renderContactList.length > 0 ? renderContactList : <h2><br/><br/>"No Contacts Available!"</h2>}
     </div>);
 }

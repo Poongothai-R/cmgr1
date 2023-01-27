@@ -12,10 +12,16 @@ const ContactDetail = (props) => {
     const renderViewContact = recs.map((item) => {
         return (<div className="table">
                 <table className="table table-striped">
+                    <tr>
+                            <td></td>
+                            <td><p align="right"><button className="fa fa-trash" onClick={()=>{deleteContact(item.id)}}></button></p></td>
+                    </tr>
+                </table>
+                <table className="table table-striped">
                     <thead>
                     <tr>
                         <th></th>
-                        <th scope="col"><button className="fa fa-trash" onClick={()=>{deleteContact(item.id)}}></button></th>
+                        <th scope="col" align="right"><button className="fa fa-trash" onClick={()=>{deleteContact(item.id)}}></button></th>
                     </tr>
                     </thead>
                     <tbody>

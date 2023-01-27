@@ -61,12 +61,12 @@ function App() {
     return (<div className="App">
         <Header contacts={records} term={searchTerm} searchKeyword={searchHandler}/>
         <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-6" >
                 {/*<h1>Contact List Section</h1>*/}
                 <ContactList contacts={searchTerm.length < 1 ? records : searchResults}
                              getContactId={viewContactHandler}/>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6" >
 
                 {
 

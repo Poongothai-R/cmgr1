@@ -63,8 +63,16 @@ list{
     /*width: auto;*/
     margin: 0;
 }
-
-
+::-webkit-scrollbar{
+    width:0;
+    background: transparent;
+}
+.clist{
+    overflow-y:auto;
+    overflow-x:hidden;
+    height:calc(100vh - 100px);
+    /*display:inline-block;*/
+}
 
 
 
